@@ -39,7 +39,7 @@ body {
 }
 
 .content-box {
-    background-image: url(/Images/bg-content.jpg);
+    background-image: url(bg-content.jpg);
     background-size: cover;
     height: 100%;
     padding: 1em 2em;
