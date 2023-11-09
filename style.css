@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@100;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Anek Tamil', sans-serif;
+    outline: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 50%;
+    height: 25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0 0 70px #000);
+}
+
+.pic-box {
+    width: 14em;
+    height: 100%;
+    border-radius: 1em 0 0 1em;
+    overflow: hidden;
+}
+
+.pic-box img {
+    height: 100%;
+    position: relative;
+    right: 7em;
+}
+
+.content-box {
+    background-image: url(/Images/bg-content.jpg);
+    background-size: cover;
+    height: 100%;
+    padding: 1em 2em;
+    color: #fff;
+    border-radius: 0 1em 1em 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1em;
+    z-index: 30;
+}
+
+.content-box h2 {
+    font-size: 3.1em;
+    font-weight: 300;
+}
+
+.content-box h2 span {
+    font-weight: 700;
+}
+
+.input-botton-box {
+    width: 90%;
+    display: flex;
+}
+
+#theInput {
+    height: 3em;
+    width: 60%;
+    padding: 1em;
+    text-align: left;
+    border-radius: 10px 0 0 10px;
+    border: 0;
+}
+
+.theButton {
+    background-color: #3962AD;
+    color: #fff;
+    text-align: center;
+    width: 30%;
+    height: 3em;
+    border-radius: 0 10px 10px 0;
+    border: 0;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+
+.loader {
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #fff;
+    animation: an1 01s ease infinite;
+}
+
+@keyframes an1 {
+    0% {
+        transform: rotate(0turn);
+    }
+
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+#rfrsh,
+#options {
+    display: none;
+}
+
+#sorry {
+    color: red;
+    display: none;
+}
+
+@media (max-width: 912px) {
+    .container {
+        width: 70%;
+        height: 25em;
+    }
+}
+
+@media (max-width: 652px) {
+    .container {
+        width: 70%;
+        height: 35em;
+        flex-direction: column;
+    }
+
+    .pic-box {
+        width: 100%;
+        height: 100%;
+        border-radius: 1em 1em 0 0;
+        overflow: hidden;
+        background-color: #000;
+    }
+
+    .pic-box img {
+        width: 100%;
+        height: fit-content;
+        right: 0;
+        top: -30px;
+    }
+
+    .content-box {
+        height: 100%;
+        padding: 3em 2em;
+        color: #fff;
+        border-radius: 0 0 1em 1em;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 1em;
+        z-index: 30;
+    }
+
+    .content-box h2 {
+        font-size: 2.4em;
+    }
+
+}
